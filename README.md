@@ -1,12 +1,17 @@
 # საქართველოს ტურისტული გზამკვლევი / Georgia Travel Guide
 
-![CI](https://github.com/thinWhiteDuke0/georgia-travel-guide/actions/workflows/ci.yml/badge.svg)
 
 მობილური აპლიკაცია, რომელიც წარმოადგენს საქართველოს ქალაქების ციფრულ ტურისტულ
 გზამკვლევს. პროექტი აგებულია მიკროსერვისულ არქიტექტურაზე.
 
 A mobile tourist guide to the cities of Georgia, built on a microservice
 backend. Bachelor's thesis project.
+
+
+
+https://github.com/user-attachments/assets/82d81d89-beab-40e2-9b39-6aa2abcfccc6
+
+
 
 ---
 
