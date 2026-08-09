@@ -145,9 +145,12 @@ services:
   - type: web
     name: guide-web
     runtime: static
-    plan: free
     rootDir: mobile
+    # Render's static runtime has no Flutter SDK, so fetch it during the build.
     buildCommand: >-
+      git clone --depth 1 -b stable https://github.com/flutter/flutter.git $HOME/flutter &&
+      export PATH="$HOME/flutter/bin:$PATH" &&
+      flutter config --enable-web &&
       flutter create --project-name georgia_travel_guide --platforms=web . &&
       flutter pub get &&
       flutter build web --release --dart-define=API_BASE_URL=$API_BASE_URL
