@@ -154,6 +154,14 @@ jobs:
         continue-on-error: true    # reported, but does not block the build
         run: flutter analyze --no-fatal-infos --no-fatal-warnings
 
+      - name: Test
+        working-directory: mobile
+        run: |
+          if ls test/*.dart >/dev/null 2>&1; then
+            flutter test
+          else
+            echo "No test files defined yet — skipping."
+          fi
 
       - name: Build web release
         working-directory: mobile
